@@ -8,6 +8,13 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Notification Page"
+                HorizontalAlignment="Left"
+                Margin="64,167,0,0"
+                VerticalAlignment="Top"
+                Height="54"
+                Click="ButtonBase_OnClick"
+                Width="261" />
 
     </Grid>
 </Page>
