@@ -40,5 +40,13 @@
             <TextBlock x:Name="pageTitle" Text="Toasts"  Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
+        <Button Content="Show Notification"
+                HorizontalAlignment="Left"
+                Margin="60,33,0,0"
+                Grid.Row="1"
+                VerticalAlignment="Top"
+                Command="{Binding ShowToastCommand}"
+                Height="71"
+                Width="274" />
     </Grid>
 </Page>

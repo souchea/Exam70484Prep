@@ -30,7 +30,12 @@ namespace Exam484Prep
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof (TilePage));
+            Frame.Navigate(typeof(TilePage));
+        }
+
+        private void ButtonBase2_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ToastPage));
         }
     }
 }
