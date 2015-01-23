@@ -48,5 +48,21 @@
                 Command="{Binding ShowToastCommand}"
                 Height="71"
                 Width="274" />
+        <Button Content="Show long duration Notification"
+                HorizontalAlignment="Left"
+                Margin="60,143,0,0"
+                Grid.Row="1"
+                VerticalAlignment="Top"
+                Command="{Binding ShowLongDurationToastCommand}"
+                Height="71"
+                Width="274" />
+        <Button Content="Show different sound Notification"
+                HorizontalAlignment="Left"
+                Margin="60,255,0,0"
+                Grid.Row="1"
+                VerticalAlignment="Top"
+                Command="{Binding ShowDifferentSoundToastCommand}"
+                Height="71"
+                Width="274" />
     </Grid>
 </Page>
