@@ -10,7 +10,6 @@ namespace Exam484Prep.ViewModel
 {
     public class TileViewModel : BaseViewModel
     {
-
         private RelayCommand _sendNotificationCommand;
 
         public RelayCommand SendNotificationCommand

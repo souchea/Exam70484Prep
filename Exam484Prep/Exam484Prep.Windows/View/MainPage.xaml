@@ -22,6 +22,33 @@
                 Height="54"
                 Click="ButtonBase2_OnClick"
                 Width="261" />
+        <Button x:Name="button" Content="Contact Page" Margin="64,318,0,0" 
+                Click="buttonContact_Click"
+                VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy" Content="Button" Margin="64,629,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy1" Content="Button" Margin="353,552,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy2" Content="Button" Margin="64,552,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy3" Content="Button" Margin="353,473,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy4" Content="Button" Margin="64,473,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy5" Content="Button" Margin="353,395,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy6" Content="Search Page" 
+                Click="buttonSearch_Click"
+                Margin="64,395,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy7" Content="Button" Margin="353,318,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy8" Content="Button" Margin="353,240,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy9" Content="Button" Margin="353,168,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
+        <Button x:Name="button_Copy10" Content="Button" Margin="936,395,0,0" VerticalAlignment="Top" Height="52" Width="261" HorizontalAlignment="Left"/>
+        <Button x:Name="button_Copy11" Content="Button" Margin="936,318,0,0" VerticalAlignment="Top" Height="52" Width="261" HorizontalAlignment="Left"/>
+        <Button x:Name="button_Copy12" Content="Button" Margin="936,240,0,0" VerticalAlignment="Top" Height="52" Width="261" HorizontalAlignment="Left"/>
+        <Button x:Name="button_Copy13" Content="Button" Margin="936,169,0,0" VerticalAlignment="Top" Height="52" Width="261" HorizontalAlignment="Left"/>
+        <Button x:Name="button_Copy14" Content="Button" Margin="641,629,0,0" VerticalAlignment="Top" Height="52" HorizontalAlignment="Left" Width="261"/>
+        <Button x:Name="button_Copy15" Content="Button" Margin="641,552,0,0" VerticalAlignment="Top" Height="52" HorizontalAlignment="Left" Width="261"/>
+        <Button x:Name="button_Copy16" Content="Button" Margin="641,473,0,0" VerticalAlignment="Top" Height="52" HorizontalAlignment="Left" Width="261"/>
+        <Button x:Name="button_Copy17" Content="Button" Margin="641,395,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="261" Height="52"/>
+        <Button x:Name="button_Copy18" Content="Button" Margin="641,318,0,0" VerticalAlignment="Top" Height="52" HorizontalAlignment="Left" Width="261"/>
+        <Button x:Name="button_Copy19" Content="Button" Margin="641,242,0,0" VerticalAlignment="Top" Height="52" HorizontalAlignment="Left" Width="261"/>
+        <Button x:Name="button_Copy20" Content="Button" Margin="641,169,0,0" VerticalAlignment="Top" Height="52" HorizontalAlignment="Left" Width="261"/>
+        <Button x:Name="button_Copy21" Content="Button" Margin="353,629,0,0" VerticalAlignment="Top" Height="52" Width="261"/>
 
     </Grid>
 </Page>

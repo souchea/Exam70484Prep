@@ -37,5 +37,15 @@ namespace Exam484Prep
         {
             Frame.Navigate(typeof(ToastPage));
         }
+
+        private void buttonContact_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (ContactPage));
+        }
+
+        private void buttonSearch_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (SearchPage));
+        }
     }
 }
