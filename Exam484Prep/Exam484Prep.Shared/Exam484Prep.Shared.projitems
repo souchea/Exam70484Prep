@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TileViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ContactViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ToastViewModel.cs" />
   </ItemGroup>
 </Project>

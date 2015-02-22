@@ -26,12 +26,12 @@ namespace Exam484Prep.View
     {
 
         private NavigationHelper navigationHelper;
-        private TileViewModel defaultViewModel = new TileViewModel();
+        private ContactViewModel defaultViewModel = new ContactViewModel();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
         /// </summary>
-        public TileViewModel DefaultViewModel
+        public ContactViewModel DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }
@@ -46,7 +46,7 @@ namespace Exam484Prep.View
         }
 
 
-        public TilePage()
+        public ContactPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);

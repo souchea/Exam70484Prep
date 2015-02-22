@@ -7,6 +7,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ApplicationSettings;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -38,6 +40,22 @@ namespace Exam484Prep
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
         }
+
+        protected override void OnWindowCreated(WindowCreatedEventArgs args)
+        {
+            base.OnWindowCreated(args);
+	        SettingsPane.GetForCurrentView().CommandsRequested += OnCommandRequested;
+        }
+
+	    void OnCommandRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs e)
+	    {
+		    e.Request.ApplicationCommands.Add(new SettingsCommand(1, "Test", OnTestCommand));
+	    }
+
+	    void OnTestCommand(IUICommand command)
+	    {
+		    
+	    }
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

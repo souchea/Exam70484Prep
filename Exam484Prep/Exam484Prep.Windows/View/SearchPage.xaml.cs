@@ -46,7 +46,7 @@ namespace Exam484Prep.View
         }
 
 
-        public TilePage()
+        public SearchPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);

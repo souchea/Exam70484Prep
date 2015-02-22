@@ -41,29 +41,13 @@
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" SelectionChanged="pageTitle_SelectionChanged"
                         />
         </Grid>
-        <Button Content="Test Live tile"
+        <Button Content="Show contacts"
                 HorizontalAlignment="Left"
                 Margin="32,39,0,0"
                 Grid.Row="1"
                 VerticalAlignment="Top"
                 Height="68"
-                Command="{Binding SendNotificationCommand}"           
-                Width="258" />
-        <Button Content="Clear Live tile"
-                HorizontalAlignment="Left"
-                Margin="32,134,0,0"
-                Grid.Row="1"
-                VerticalAlignment="Top"
-                Height="65"
-                Command="{Binding ClearTileNotificationsCommand}"
-                Width="258" />
-        <Button Content="Create Secondary Tile"
-                HorizontalAlignment="Left"
-                Margin="32,231,0,0"
-                Grid.Row="1"
-                VerticalAlignment="Top"
-                Height="65"
-                Command="{Binding CreateSecondaryTileCommand}"
+                Command="{Binding ShowContactCommand}"           
                 Width="258" />
     </Grid>
 </Page>
