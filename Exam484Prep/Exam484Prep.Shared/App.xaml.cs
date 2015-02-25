@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Exam484Prep.View;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Search;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.ApplicationSettings;
@@ -45,9 +47,30 @@ namespace Exam484Prep
         {
             base.OnWindowCreated(args);
 	        SettingsPane.GetForCurrentView().CommandsRequested += OnCommandRequested;
+            SearchPane.GetForCurrentView().QuerySubmitted += OnQuerySubmitted;
+            SearchPane.GetForCurrentView().QueryChanged += OnQueryChanged;
         }
 
-	    void OnCommandRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs e)
+        private void OnQueryChanged(SearchPane sender, SearchPaneQueryChangedEventArgs args)
+        {
+
+        }
+
+        private void OnQuerySubmitted(SearchPane sender, SearchPaneQuerySubmittedEventArgs args)
+        {
+            var previousContent = Window.Current.Content;
+            var frame = previousContent as Frame;
+
+            if (frame != null)
+            {
+                frame.Navigate(typeof(SearchResultsPage), args.QueryText);
+
+                Window.Current.Content = frame;
+                Window.Current.Activate();
+            }
+        }
+
+        void OnCommandRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs e)
 	    {
 		    e.Request.ApplicationCommands.Add(new SettingsCommand(1, "Test", OnTestCommand));
 	    }

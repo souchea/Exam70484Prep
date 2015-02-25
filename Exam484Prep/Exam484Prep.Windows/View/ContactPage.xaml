@@ -49,5 +49,13 @@
                 Height="68"
                 Command="{Binding ShowContactCommand}"           
                 Width="258" />
+        <Button Content="Show multiple contacts"
+        	HorizontalAlignment="Left"
+        	Margin="32,130,0,0"
+        	Grid.Row="1"
+        	VerticalAlignment="Top"
+        	Height="68"
+        	Command="{Binding ShowMultipleContactCommand}"           
+        	Width="258" />
     </Grid>
 </Page>
