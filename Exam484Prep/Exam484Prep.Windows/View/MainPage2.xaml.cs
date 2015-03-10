@@ -68,7 +68,7 @@ namespace Exam484Prep.View
         {
             DefaultViewModel.Add(new Chapter
             {
-                Title = "1 Design Windows Store Apps",
+                Title = "1 Design Windows Store apps",
                 Items = new List<Item>
                 {
                     new Item
@@ -91,7 +91,7 @@ namespace Exam484Prep.View
 
             DefaultViewModel.Add(new Chapter
             {
-                Title = "Chapter2",
+                Title = "2. Develop Windows Store apps",
                 Items = new List<Item>
                 {
                     new Item
@@ -104,7 +104,7 @@ namespace Exam484Prep.View
 
             DefaultViewModel.Add(new Chapter
             {
-                Title = "Chapter3",
+                Title = "3. Create the user interface",
                 Items = new List<Item>
                 {
                     new Item
@@ -117,7 +117,20 @@ namespace Exam484Prep.View
 
             DefaultViewModel.Add(new Chapter
             {
-                Title = "Chapter4",
+                Title = "4. Program the user interaction",
+                Items = new List<Item>
+                {
+                    new Item
+                    {
+                        Name = "Toast",
+                        Page = typeof(ToastPage)
+                    }
+                }
+            });
+
+            DefaultViewModel.Add(new Chapter
+            {
+                Title = "5. Manage security and data",
                 Items = new List<Item>
                 {
                     new Item
