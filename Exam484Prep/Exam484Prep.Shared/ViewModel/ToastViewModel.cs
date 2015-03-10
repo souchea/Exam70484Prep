@@ -94,14 +94,14 @@ namespace Exam484Prep.ViewModel
 
         public void ShowToast()
         {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastText01;
+            ToastTemplateType toastTemplate = ToastTemplateType.ToastImageAndText01;
             XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
             XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
             toastTextElements[0].AppendChild(toastXml.CreateTextNode(
                  "Hello! I am an awesome cat… awesome cats make Windows 8 awesomer!!"));
-            //XmlElement tileImage = toastXml.GetElementsByTagName("image")[0] as XmlElement;
-            //tileImage.SetAttribute("src", "ms-appx:///Assets/Cat-2.JPG");
-            //tileImage.SetAttribute("alt", "awesome cat");
+            XmlElement tileImage = toastXml.GetElementsByTagName("image")[0] as XmlElement;
+            tileImage.SetAttribute("src", "ms-appx:///Assets/mcnext.png");
+            tileImage.SetAttribute("alt", "awesome cat");
             ToastNotification toast = new ToastNotification(toastXml);
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
