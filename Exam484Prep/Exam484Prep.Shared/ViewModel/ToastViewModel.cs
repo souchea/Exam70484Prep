@@ -77,8 +77,7 @@ namespace Exam484Prep.ViewModel
             toastTextElements[0].AppendChild(toastXml.CreateTextNode(
                  "Hello! I am an awesome cat… Awesome cats make Windows 8 awesomer!!"));
             XmlElement tileImage = toastXml.GetElementsByTagName("image")[0] as XmlElement;
-            tileImage.SetAttribute("src",
-                       "http://placekitten.com/256/256");
+            tileImage.SetAttribute("src", "ms-appx:///Assets/mcnext.png");
             tileImage.SetAttribute("alt", "awesome cat");
             // Display the toast for 25 seconds
             XmlElement toastNode = (XmlElement)toastXml.SelectSingleNode("/toast");
@@ -114,8 +113,7 @@ namespace Exam484Prep.ViewModel
             toastTextElements[0].AppendChild(toastXml.CreateTextNode(
                  "Hello! I am an awesome cat… Awesome cats make Windows 8 awesomer!!"));
             XmlElement tileImage = toastXml.GetElementsByTagName("image")[0] as XmlElement;
-            tileImage.SetAttribute("src",
-                       "http://placekitten.com/256/256");
+            tileImage.SetAttribute("src", "ms-appx:///Assets/mcnext.png");
             tileImage.SetAttribute("alt", "awesome cat");
             // Display the toast for 25 seconds. If you want the toast to be displayed for
             // 7 seconds, do not set the duration attribute to any value. The default value is

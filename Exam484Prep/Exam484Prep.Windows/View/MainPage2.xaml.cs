@@ -71,11 +71,15 @@ namespace Exam484Prep.View
                 Title = "1 Design Windows Store apps",
                 Items = new List<Item>
                 {
-                    new Item
-                    {
-                        Name = "Toast",
-                        Page = typeof(ToastPage)
-                    },
+
+                }
+            });
+
+            DefaultViewModel.Add(new Chapter
+            {
+                Title = "2. Develop Windows Store apps",
+                Items = new List<Item>
+                {
                     new Item
                     {
                         Name = "Contact",
@@ -91,27 +95,10 @@ namespace Exam484Prep.View
 
             DefaultViewModel.Add(new Chapter
             {
-                Title = "2. Develop Windows Store apps",
-                Items = new List<Item>
-                {
-                    new Item
-                    {
-                        Name = "Tile",
-                        Page = typeof(TilePage)
-                    }
-                }
-            });
-
-            DefaultViewModel.Add(new Chapter
-            {
                 Title = "3. Create the user interface",
                 Items = new List<Item>
                 {
-                    new Item
-                    {
-                        Name = "Toast",
-                        Page = typeof(ToastPage)
-                    }
+
                 }
             });
 
@@ -124,6 +111,11 @@ namespace Exam484Prep.View
                     {
                         Name = "Toast",
                         Page = typeof(ToastPage)
+                    },
+                    new Item
+                    {
+                        Name = "Tile",
+                        Page = typeof(TilePage)
                     }
                 }
             });
@@ -133,11 +125,7 @@ namespace Exam484Prep.View
                 Title = "5. Manage security and data",
                 Items = new List<Item>
                 {
-                    new Item
-                    {
-                        Name = "Toast",
-                        Page = typeof(ToastPage)
-                    }
+
                 }
             });
 
