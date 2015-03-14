@@ -24,8 +24,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\Chapter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\WebAuthViewMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\WindowsAuthViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TileViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ContactViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ToastViewModel.cs" />
   </ItemGroup>
 </Project>

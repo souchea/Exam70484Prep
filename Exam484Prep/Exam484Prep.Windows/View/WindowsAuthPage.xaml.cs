@@ -20,16 +20,16 @@ namespace Exam484Prep.View
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class SearchPage : Page
+    public sealed partial class WindowsAuthPage : Page
     {
 
         private NavigationHelper navigationHelper;
-        private SearchViewModel defaultViewModel = new SearchViewModel();
+        private WindowsAuthViewModel defaultViewModel = new WindowsAuthViewModel();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
         /// </summary>
-        public SearchViewModel DefaultViewModel
+        public WindowsAuthViewModel DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }
@@ -44,7 +44,7 @@ namespace Exam484Prep.View
         }
 
 
-        public SearchPage()
+        public WindowsAuthPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);

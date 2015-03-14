@@ -75,10 +75,10 @@ namespace Exam484Prep.ViewModel
             XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
             XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
             toastTextElements[0].AppendChild(toastXml.CreateTextNode(
-                 "Hello! I am an awesome cat… Awesome cats make Windows 8 awesomer!!"));
+                 "Hello! Toast with different sound"));
             XmlElement tileImage = toastXml.GetElementsByTagName("image")[0] as XmlElement;
             tileImage.SetAttribute("src", "ms-appx:///Assets/mcnext.png");
-            tileImage.SetAttribute("alt", "awesome cat");
+            tileImage.SetAttribute("alt", "mcNext");
             // Display the toast for 25 seconds
             XmlElement toastNode = (XmlElement)toastXml.SelectSingleNode("/toast");
             toastNode.SetAttribute("duration", "long");
@@ -97,10 +97,10 @@ namespace Exam484Prep.ViewModel
             XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
             XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
             toastTextElements[0].AppendChild(toastXml.CreateTextNode(
-                 "Hello! I am an awesome cat… awesome cats make Windows 8 awesomer!!"));
+                 "Hello! Normal toast"));
             XmlElement tileImage = toastXml.GetElementsByTagName("image")[0] as XmlElement;
             tileImage.SetAttribute("src", "ms-appx:///Assets/mcnext.png");
-            tileImage.SetAttribute("alt", "awesome cat");
+            tileImage.SetAttribute("alt", "mcNext");
             ToastNotification toast = new ToastNotification(toastXml);
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
@@ -111,10 +111,10 @@ namespace Exam484Prep.ViewModel
             XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
             XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
             toastTextElements[0].AppendChild(toastXml.CreateTextNode(
-                 "Hello! I am an awesome cat… Awesome cats make Windows 8 awesomer!!"));
+                 "Hello! I am toast that last a long time"));
             XmlElement tileImage = toastXml.GetElementsByTagName("image")[0] as XmlElement;
             tileImage.SetAttribute("src", "ms-appx:///Assets/mcnext.png");
-            tileImage.SetAttribute("alt", "awesome cat");
+            tileImage.SetAttribute("alt", "mcNext");
             // Display the toast for 25 seconds. If you want the toast to be displayed for
             // 7 seconds, do not set the duration attribute to any value. The default value is
             // 'short' and the duration will be 7 seconds.

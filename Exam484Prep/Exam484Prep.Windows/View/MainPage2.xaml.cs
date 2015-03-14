@@ -89,6 +89,11 @@ namespace Exam484Prep.View
                     {
                         Name = "Search",
                         Page = typeof(SearchPage)
+                    },
+                    new Item
+                    {
+                        Name = "Settings",
+                        Page = typeof(SettingsPage)
                     }
                 }
             });

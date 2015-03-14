@@ -119,11 +119,23 @@
     <Compile Include="View\MainPage2.xaml.cs">
       <DependentUpon>MainPage2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SearchResultsPage.xaml.cs">
       <DependentUpon>SearchResultsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsFlyoutExample.xaml.cs">
+      <DependentUpon>SettingsFlyoutExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WebAuthPage.xaml.cs">
+      <DependentUpon>WebAuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowsAuthPage.xaml.cs">
+      <DependentUpon>WindowsAuthPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TilePage.xaml.cs">
       <DependentUpon>TilePage.xaml</DependentUpon>
@@ -139,6 +151,7 @@
     <None Include="Exam484Prep.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\badge.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\mcnext.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -165,12 +178,28 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\SearchPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>
       </SubType>
     </Page>
     <Page Include="View\SearchResultsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SettingsFlyoutExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WebAuthPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\WindowsAuthPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

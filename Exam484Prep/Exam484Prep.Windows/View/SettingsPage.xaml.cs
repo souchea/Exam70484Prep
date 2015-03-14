@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ApplicationSettings;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -20,7 +21,7 @@ namespace Exam484Prep.View
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class SearchPage : Page
+    public sealed partial class SettingsPage : Page
     {
 
         private NavigationHelper navigationHelper;
@@ -44,7 +45,7 @@ namespace Exam484Prep.View
         }
 
 
-        public SearchPage()
+        public SettingsPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
@@ -100,6 +101,20 @@ namespace Exam484Prep.View
             navigationHelper.OnNavigatedFrom(e);
         }
 
+        
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var flyout = new SettingsFlyoutExample();
+            flyout.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SettingsPane.Show();
+        }
+
+        
     }
 }

@@ -4,7 +4,11 @@ using System.Text;
 using System.Windows.Input;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
+using Windows.UI.StartScreen;
+using Windows.UI.Xaml;
 using Exam484Prep.Common;
+using Windows.UI.Notifications;
+using Windows.ApplicationModel.Background;
 
 namespace Exam484Prep.ViewModel
 {
@@ -70,9 +74,32 @@ namespace Exam484Prep.ViewModel
             }
         }
 
-        public void CreateSecondaryTile()
+        public async void CreateSecondaryTile()
         {
+            //Uri logo = new Uri("ms-appx:///Assets/mcnext.png");
+            //string tileActivationArguments = appbarTileId + " was pinned at " +
+            //DateTime.Now.ToLocalTime().ToString();
+            //SecondaryTile secondaryTile = new SecondaryTile(appbarTileId,
+            //"70-484",
+            //"Super Exam Win8",
+            //tileActivationArguments,
+            //TileOptions.ShowNameOnLogo | TileOptions.ShowNameOnWideLogo,
+            //logo);
+            //secondaryTile.ForegroundText = ForegroundText.Dark;
+            //secondaryTile.SmallLogo =
+            //new Uri("ms-appx:///Assets/Cat-Sec-2.JPG");
+            //secondaryTile.WideLogo = new Uri("ms-appx:///Assets/mcnext.png");
+            //bool isPinned = await secondaryTile.RequestCreateForSelectionAsync(
+            //GetElementRect((FrameworkElement)sender),
+            //Windows.UI.Popups.Placement.Above);
 
+
+            string badgeXmlString = "<badge value='6'/>";
+            Windows.Data.Xml.Dom.XmlDocument badgeDOM = new Windows.Data.Xml.Dom.XmlDocument();
+            badgeDOM.LoadXml(badgeXmlString);
+            BadgeNotification badge = new BadgeNotification(badgeDOM);
+            BadgeUpdateManager.CreateBadgeUpdaterForApplication().Update(badge);
+            //rootPage.NotifyUser("Badge notification sent", NotifyType.StatusMessage);
         }
 
         public void ClearTileNotifications()
@@ -88,10 +115,10 @@ namespace Exam484Prep.ViewModel
                TileUpdateManager.GetTemplateContent(TileTemplateType.TileWideImageAndText01);
             XmlNodeList wideTileTextAttributes =
                      wideImageAndTextTileXml.GetElementsByTagName("text");
-            wideTileTextAttributes[0].InnerText = "Awesome cats make Windows 8 awesomer!!";
+            wideTileTextAttributes[0].InnerText = "McNext 70-484";
             XmlElement tileImage = wideImageAndTextTileXml.GetElementsByTagName("image")[0]
                 as XmlElement;
-            //tileImage.SetAttribute("src", "ms-appx:///Assets/Cat-1.JPG");
+            tileImage.SetAttribute("src", "ms-appx:///Assets/mcnext.png");
             tileImage.SetAttribute("alt", "Awesome Cats");
 
             // Create and populate the square tile
@@ -99,7 +126,7 @@ namespace Exam484Prep.ViewModel
                        TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquareText04);
             XmlNodeList squareTileTextAttributes = squareTileXml.GetElementsByTagName("text");
             squareTileTextAttributes[0].AppendChild(squareTileXml.CreateTextNode(
-                             "Awesome cats make Windows 8 awesomer!"));
+                             "test live Tile"));
 
             // Import the XML template for the square tile into the wide tile
             IXmlNode node = wideImageAndTextTileXml.ImportNode(

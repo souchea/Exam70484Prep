@@ -78,7 +78,8 @@ namespace Exam484Prep
 
 	    void OnTestCommand(IUICommand command)
 	    {
-		    
+		    var flyout = new SettingsFlyoutExample();
+            flyout.Show();
 	    }
 
         /// <summary>
