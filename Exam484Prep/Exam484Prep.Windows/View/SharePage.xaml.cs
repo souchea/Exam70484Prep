@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ApplicationSettings;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -20,16 +21,16 @@ namespace Exam484Prep.View
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class ContactPage : Page
+    public sealed partial class SharePage : Page
     {
 
         private NavigationHelper navigationHelper;
-        private ContactViewModel defaultViewModel = new ContactViewModel();
+        private ShareViewModel defaultViewModel = new ShareViewModel();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
         /// </summary>
-        public ContactViewModel DefaultViewModel
+        public ShareViewModel DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }
@@ -44,7 +45,7 @@ namespace Exam484Prep.View
         }
 
 
-        public ContactPage()
+        public SharePage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
@@ -100,11 +101,20 @@ namespace Exam484Prep.View
             navigationHelper.OnNavigatedFrom(e);
         }
 
+        
         #endregion
 
-        private void pageTitle_SelectionChanged(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var flyout = new SettingsFlyoutExample();
+            flyout.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SettingsPane.Show();
+        }
+
+        
     }
 }

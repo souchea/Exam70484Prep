@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\Chapter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ShareViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\WebAuthViewMode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\WindowsAuthViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TileViewModel.cs" />
